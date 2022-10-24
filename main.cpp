@@ -4,6 +4,7 @@
 using namespace std;
 int main() {
     SetConsoleOutputCP(CP_UTF8);
+
     cout << "int: " << sizeof(int) << "\n" << "short int: " << sizeof(short int) << "\n"
     << "long int: " << sizeof(long int) << "\n" << "float: " << sizeof(float) << "\n"
     << "double: " << sizeof(double) << "\n" << "long double: " << sizeof(long double) << "\n"
@@ -11,9 +12,9 @@ int main() {
 
     while ( _getch()) {
         int a;
-        cout << "введите целое число:";
+        cout << "введите целое число: ";
         cin >> a;
-        cout << "двоичное представление в памяти числа " << a << ":";
+        cout << "двоичное представление в памяти числа " << a << ": ";
         int b = sizeof(a) * 8 - 1;
         unsigned int mask = 1 << b;
         if (a > 0){
@@ -44,7 +45,7 @@ int main() {
             float f;
             int ia;
         };
-        cout << "введите вещественное число:";
+        cout << "введите вещественное число: ";
         cin >> f;
         cout << "двоичное представление в памяти числа типа float: ";
         //double f1 = double(f);
@@ -57,13 +58,13 @@ int main() {
             putchar(ia & mask1 ? '1' : '0');
             ia = ia << 1;
         }
-        cout << "\n";
+        cout << "\n\n";
 
         union {
             double d;
             char mas[sizeof(d)];
         };
-        cout << "введите вещественное число:";
+        cout << "введите вещественное число: ";
         cin >> d;
         cout << "двоичное представление в памяти числа типа double: ";
         for (int i = sizeof(d) - 1; i >= 0; i--) {
@@ -79,7 +80,7 @@ int main() {
         };
         cout << "\n\n";
 
-        cout << "нажмите enter чтобы продолжить" << endl;
+        cout << "нажмите enter чтобы продолжить" << "\n" << endl;
     };
     return 0;
 }
