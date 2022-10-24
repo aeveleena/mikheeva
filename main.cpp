@@ -48,7 +48,6 @@ int main() {
         cout << "введите вещественное число: ";
         cin >> f;
         cout << "двоичное представление в памяти числа типа float: ";
-        //double f1 = double(f);
         int b1 = sizeof(f) * 8 - 1;
         int mask1 = 1 << b1;
         for (int i = 0; i <= b1; i++) {
